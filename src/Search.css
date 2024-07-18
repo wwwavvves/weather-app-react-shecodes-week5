@@ -22,10 +22,16 @@ input {
 }
 
 .search-btn {
-  background-color: rgba(188, 187, 208, 0.7);
+  background-color: #aa7d8480;
   transition: all 150ms ease-out;
 }
 
+.search-btn:hover {
+  background-color: #aa7d8480;
+  box-shadow: 1px 1px 4px #b3b3b3;
+  color: #fff;
+}
+
 .search-btn:active {
-  background-color: rgba(188, 187, 208, 0.5);
+  background-color: #aa7d84cc;
 }
