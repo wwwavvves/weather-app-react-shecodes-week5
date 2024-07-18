@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+      <h1>Hello world</h1>
+      <footer>
+        Coded by{" "}
+        <a href="https://github.com/wwwavvves" traget="_blank" rel="noreferrer">
+          Diana Guerreiro
+        </a>{" "}
+        and open-sourced on{" "}
         <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="https://github.com/wwwavvves/weather-app-react-shecodes-week5"
+          traget="_blank"
+          rel="noreferrer"
         >
-          Learn React
+          GitHub
         </a>
-      </header>
+      </footer>
     </div>
   );
 }
