@@ -3,45 +3,52 @@ import axios from "axios";
 import "./Weather.css";
 
 export default function Weather() {
-  let [city, setCity] = useState("");
-
-  function showWeather(response) {
-    console.log(response.data);
-  }
-
-  function handleSubmit(event) {
+//   let [city, setCity] = useState("");
+    let city = "Lisbon";
     const apiKey = "68a066fb34dtb3fc9d4875c8d3bo09b6";
     let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
 
-    event.preventDefault();
-    console.log("ready");
-
     axios.get(apiUrl).then(showWeather);
-  }
 
-  function handleChange(event) {
-    setCity(event.target.value);
-  }
+    function showWeather(response) {
+        console.log("Hello");
+    }
+
+//   function showWeather(response) {
+//     console.log(response.data);
+//   }
+
+//   function handleSubmit(event) {
+//     const apiKey = "68a066fb34dtb3fc9d4875c8d3bo09b6";
+//     let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+
+//     event.preventDefault();
+//     console.log("ready");
+
+//     axios.get(apiUrl).then(showWeather);
+//   }
+
+//   function handleChange(event) {
+//     setCity(event.target.value);
+//   }
 
   return (
     <div className="Weather">
-      /* Search */
       <div className="Search">
-        <form onSubmit={handleSubmit}>
+        <form /*onSubmit={handleSubmit}*/>
           <input
             type="search"
             placeholder="Enter a city"
             className="search-input"
             autoFocus="on"
-            onChange={handleChange}
+            /*onChange={handleChange}*/
           />
           <input type="submit" value="Search" className="search-btn" />
         </form>
       </div>
-      /* Current weather */
-      <div className="row align-items-center">
+      <div className="Current-weather row align-items-center">
         <div className="col-6 weather-details">
-          <h1>Lisbon</h1>
+          <h1>{city}</h1>
           <ul>
             <li>Tuesday 17:50, clear sky</li>
             <li>
@@ -56,7 +63,6 @@ export default function Weather() {
           <div className="celsius">ºC</div>
         </div>
       </div>
-      /* Footer */
       <footer className="Footer">
         Coded by{" "}
         <a href="https://github.com/wwwavvves" target="_blank" rel="noreferrer">
