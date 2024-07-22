@@ -28,21 +28,27 @@
 }
 
 .city-temperature {
-  text-align: right;
+  align-items: center;
 }
 
-.current-weather-icon {
-  font-size: 50px;
-  align-self: center;
+.city-temperature img {
+  width: 90px;
+  margin-top: 8px;
 }
 
 .current-temperature {
-  font-size: 80px;
+  font-size: 76px;
   font-weight: bold;
   line-height: 1;
 }
 
-.celsius {
-  font-size: 30px;
-  margin-top: 4px;
+.temperature-units {
+  font-size: 18px;
+  margin-top: 8px;
+}
+
+.celsius,
+.fahrenheit {
+  color: #212529;
+  text-decoration: none;
 }
