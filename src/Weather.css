@@ -36,6 +36,69 @@ input {
   background-color: #8e8695;
 }
 
+.Current-weather {
+  padding: 30px 0;
+  border-top: 1px solid #fff9;
+}
+
+.Weather h1 {
+  font-size: 38px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.weather-details {
+  text-align: left;
+}
+
+.weather-details ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  color: #5a5a5a;
+}
+
+.humidity,
+.wind {
+  color: #aa7d84;
+  font-weight: bold;
+}
+
+.city-temperature {
+  align-items: center;
+}
+
+.city-temperature img {
+  width: 90px;
+  margin-top: 8px;
+}
+
+.current-temperature {
+  font-size: 76px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.temperature-units {
+  font-size: 18px;
+  margin-top: 8px;
+}
+
+.celsius,
+.fahrenheit {
+  color: #212529;
+  text-decoration: none;
+}
+
+.WeatherForecast {
+  border-bottom: 1px solid #fff9;
+  padding-bottom: 30px;
+}
+
+.forecast-icon {
+  width: 70px;
+}
+
 footer {
   color: #909090;
   font-size: 13px;
