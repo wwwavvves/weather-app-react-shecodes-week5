@@ -21,10 +21,10 @@ export default function WeatherTemperature(props) {
           <span className="celsius">
             <strong>ºC</strong>
           </span>
-          <span> | </span>
+          {/* <span> | </span>
           <a href="/" className="fahrenheit" onClick={showFahrenheit}>
             ºF
-          </a>
+          </a> */}
         </div>
       </div>
     );

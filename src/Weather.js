@@ -9,20 +9,24 @@ export default function Weather(props) {
   const [city, setCity] = useState(props.defaultCity);
 
   function showWeather(response) {
-    setWeatherData({
-      ready: true,
-      city: response.data.city,
-      coordinates: {
-        latitude: response.data.coordinates.latitude,
-        longitude: response.data.coordinates.longitude,
-      },
-      date: new Date(response.data.time * 1000),
-      description: response.data.condition.description,
-      humidity: response.data.temperature.humidity,
-      wind: response.data.wind.speed,
-      iconUrl: response.data.condition.icon_url,
-      temperature: Math.round(response.data.temperature.current),
-    });
+     if (response.data.status === 'not_found') {
+      alert("City not found, please try again!");
+    } else {
+      setWeatherData({
+        ready: true,
+        city: response.data.city,
+        coordinates: {
+          latitude: response.data.coordinates.latitude,
+          longitude: response.data.coordinates.longitude,
+        },
+        date: new Date(response.data.time * 1000),
+        description: response.data.condition.description,
+        humidity: response.data.temperature.humidity,
+        wind: response.data.wind.speed,
+        iconUrl: response.data.condition.icon_url,
+        temperature: Math.round(response.data.temperature.current),
+      });
+    }
   }
 
   function search() {
@@ -58,7 +62,7 @@ export default function Weather(props) {
           </form>
         </div>
         <WeatherInfo data={weatherData} />
-        <WeatherForecast data={weatherData} />
+        <WeatherForecast coordinates={weatherData.coordinates} />
         <footer className="Footer">
           Coded by{" "}
           <a
